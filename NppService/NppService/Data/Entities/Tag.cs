@@ -13,6 +13,10 @@ namespace NppService.Data.Entities
         [Required]
         public string Name { get; set; }
 
+        public DateTime CreatedOn { get; set; }
+
+        public DateTime UpdatedOn { get; set; }
+
         public virtual ICollection<ArticleTag> Articles { get; set; }
 
         public virtual ICollection<PostTag> Posts { get; set; }

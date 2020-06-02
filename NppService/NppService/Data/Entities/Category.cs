@@ -15,6 +15,10 @@ namespace NppService.Data.Entities
         [Required]
         public string Name { get; set; }
 
+        public DateTime CreatedOn { get; set; }
+
+        public DateTime UpdatedOn { get; set; }
+
         public virtual ICollection<Post> Posts { get; set; }
 
         public virtual ICollection<Article> Articles { get; set; }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NppService.Migrations
 {
@@ -12,7 +13,9 @@ namespace NppService.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false),
+                    CreatedOn = table.Column<DateTime>(nullable: false),
+                    UpdatedOn = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -25,7 +28,9 @@ namespace NppService.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false),
+                    CreatedOn = table.Column<DateTime>(nullable: false),
+                    UpdatedOn = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -41,7 +46,8 @@ namespace NppService.Migrations
                     Nickname = table.Column<string>(maxLength: 48, nullable: false),
                     Username = table.Column<string>(maxLength: 48, nullable: false),
                     Password = table.Column<string>(nullable: false),
-                    Token = table.Column<string>(nullable: true)
+                    Token = table.Column<string>(nullable: true),
+                    Register = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -56,6 +62,8 @@ namespace NppService.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(nullable: false),
                     Content = table.Column<string>(nullable: false),
+                    CreatedOn = table.Column<DateTime>(nullable: false),
+                    UpdatedOn = table.Column<DateTime>(nullable: false),
                     UserId = table.Column<int>(nullable: false),
                     CategoryId = table.Column<int>(nullable: true)
                 },
@@ -84,6 +92,8 @@ namespace NppService.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(nullable: false),
                     Content = table.Column<string>(nullable: false),
+                    CreatedOn = table.Column<DateTime>(nullable: false),
+                    UpdatedOn = table.Column<DateTime>(nullable: false),
                     UserId = table.Column<int>(nullable: false),
                     CategoryId = table.Column<int>(nullable: true)
                 },

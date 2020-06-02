@@ -26,6 +26,8 @@ namespace NppService.Data.Entities
         [ProtectedPersonalData]
         public string Token { get; set; }
 
+        public DateTime Register { get; set; }
+
         public virtual ICollection<Post> Posts { get; set; }
 
         public virtual ICollection<Article> Articles { get; set; }
