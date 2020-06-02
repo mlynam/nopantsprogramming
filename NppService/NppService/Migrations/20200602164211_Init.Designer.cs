@@ -10,7 +10,7 @@ using NppService.Data.Contexts;
 namespace NppService.Migrations
 {
     [DbContext(typeof(MainContext))]
-    [Migration("20200602152146_Init")]
+    [Migration("20200602164211_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -197,7 +197,7 @@ namespace NppService.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Register")
+                    b.Property<DateTime>("RegisteredOn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Token")

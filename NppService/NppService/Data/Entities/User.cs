@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using HotChocolate;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -26,7 +27,7 @@ namespace NppService.Data.Entities
         [ProtectedPersonalData]
         public string Token { get; set; }
 
-        public DateTime Register { get; set; }
+        public DateTime RegisteredOn { get; set; }
 
         public virtual ICollection<Post> Posts { get; set; }
 

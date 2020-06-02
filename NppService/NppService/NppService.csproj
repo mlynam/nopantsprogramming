@@ -5,31 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200530110558_Init.cs" />
-    <Compile Remove="Migrations\20200530110558_Init.Designer.cs" />
-    <Compile Remove="Migrations\20200530110635_Init.cs" />
-    <Compile Remove="Migrations\20200530110635_Init.Designer.cs" />
-    <Compile Remove="Migrations\20200530110746_Init.cs" />
-    <Compile Remove="Migrations\20200530110746_Init.Designer.cs" />
-    <Compile Remove="Migrations\20200530112118_Init.cs" />
-    <Compile Remove="Migrations\20200530112118_Init.Designer.cs" />
-    <Compile Remove="Migrations\20200530112214_Init.cs" />
-    <Compile Remove="Migrations\20200530112214_Init.Designer.cs" />
-    <Compile Remove="Migrations\20200530112335_Init.cs" />
-    <Compile Remove="Migrations\20200530112335_Init.Designer.cs" />
-    <Compile Remove="Migrations\20200530112419_Init.cs" />
-    <Compile Remove="Migrations\20200530112419_Init.Designer.cs" />
-    <Compile Remove="Migrations\20200530112726_Init.cs" />
-    <Compile Remove="Migrations\20200530112726_Init.Designer.cs" />
-    <Compile Remove="Migrations\20200530112845_Init.cs" />
-    <Compile Remove="Migrations\20200530112845_Init.Designer.cs" />
-    <Compile Remove="Migrations\20200530113734_Init.cs" />
-    <Compile Remove="Migrations\20200530113734_Init.Designer.cs" />
-    <Compile Remove="Migrations\20200530114009_Init.cs" />
-    <Compile Remove="Migrations\20200530114009_Init.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="HotChocolate" Version="10.4.3" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="10.4.3" />
+    <PackageReference Include="HotChocolate.AspNetCore.Playground" Version="10.4.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Json" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.4" />
@@ -39,10 +17,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="API\" />
   </ItemGroup>
 
 

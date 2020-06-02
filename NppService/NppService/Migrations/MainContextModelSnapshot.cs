@@ -195,7 +195,7 @@ namespace NppService.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Register")
+                    b.Property<DateTime>("RegisteredOn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Token")

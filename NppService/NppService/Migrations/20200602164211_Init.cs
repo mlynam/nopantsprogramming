@@ -47,7 +47,7 @@ namespace NppService.Migrations
                     Username = table.Column<string>(maxLength: 48, nullable: false),
                     Password = table.Column<string>(nullable: false),
                     Token = table.Column<string>(nullable: true),
-                    Register = table.Column<DateTime>(nullable: false)
+                    RegisteredOn = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
