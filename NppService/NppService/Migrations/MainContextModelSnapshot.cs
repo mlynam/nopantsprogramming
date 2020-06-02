@@ -30,12 +30,11 @@ namespace NppService.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Content")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("TagId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
@@ -44,8 +43,6 @@ namespace NppService.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("TagId");
 
                     b.HasIndex("UserId");
 
@@ -82,42 +79,12 @@ namespace NppService.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("NppService.Data.Entities.Comment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("ArticleId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Content")
-                        .HasColumnType("nvarchar(1024)")
-                        .HasMaxLength(1024);
-
-                    b.Property<int?>("PostId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ArticleId");
-
-                    b.HasIndex("PostId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("NppService.Data.Entities.Post", b =>
@@ -131,12 +98,11 @@ namespace NppService.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Content")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("TagId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
@@ -145,8 +111,6 @@ namespace NppService.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("TagId");
 
                     b.HasIndex("UserId");
 
@@ -183,6 +147,7 @@ namespace NppService.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -198,16 +163,19 @@ namespace NppService.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Nickname")
+                        .IsRequired()
                         .HasColumnType("nvarchar(48)")
                         .HasMaxLength(48);
 
                     b.Property<string>("Password")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Token")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
+                        .IsRequired()
                         .HasColumnType("nvarchar(48)")
                         .HasMaxLength(48);
 
@@ -221,10 +189,6 @@ namespace NppService.Migrations
                     b.HasOne("NppService.Data.Entities.Category", "Category")
                         .WithMany("Articles")
                         .HasForeignKey("CategoryId");
-
-                    b.HasOne("NppService.Data.Entities.Tag", null)
-                        .WithMany("Articles")
-                        .HasForeignKey("TagId");
 
                     b.HasOne("NppService.Data.Entities.User", "User")
                         .WithMany("Articles")
@@ -242,25 +206,8 @@ namespace NppService.Migrations
                         .IsRequired();
 
                     b.HasOne("NppService.Data.Entities.Tag", "Tag")
-                        .WithMany()
+                        .WithMany("Articles")
                         .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("NppService.Data.Entities.Comment", b =>
-                {
-                    b.HasOne("NppService.Data.Entities.Article", "Article")
-                        .WithMany("Comments")
-                        .HasForeignKey("ArticleId");
-
-                    b.HasOne("NppService.Data.Entities.Post", "Post")
-                        .WithMany("Comments")
-                        .HasForeignKey("PostId");
-
-                    b.HasOne("NppService.Data.Entities.User", "User")
-                        .WithMany("Comments")
-                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -270,10 +217,6 @@ namespace NppService.Migrations
                     b.HasOne("NppService.Data.Entities.Category", "Category")
                         .WithMany("Posts")
                         .HasForeignKey("CategoryId");
-
-                    b.HasOne("NppService.Data.Entities.Tag", null)
-                        .WithMany("Posts")
-                        .HasForeignKey("TagId");
 
                     b.HasOne("NppService.Data.Entities.User", "User")
                         .WithMany("Posts")
@@ -291,7 +234,7 @@ namespace NppService.Migrations
                         .IsRequired();
 
                     b.HasOne("NppService.Data.Entities.Tag", "Tag")
-                        .WithMany()
+                        .WithMany("Posts")
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

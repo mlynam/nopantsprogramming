@@ -12,7 +12,6 @@ namespace NppService.Data.Contexts
         public DbSet<Article> Articles { get; set; }
         public DbSet<ArticleTag> ArticleTags { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Comment> Comments { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostTag> PostTags { get; set; }
         public DbSet<Tag> Tags { get; set; }

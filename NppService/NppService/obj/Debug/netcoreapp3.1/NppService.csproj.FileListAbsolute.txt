@@ -1,7 +1,6 @@
 D:\Git Projects\nopantsprogramming\NppService\NppService\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Git Projects\nopantsprogramming\NppService\NppService\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Git Projects\nopantsprogramming\NppService\NppService\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-D:\Git Projects\nopantsprogramming\NppService\NppService\obj\Debug\netcoreapp3.1\NppService.csprojAssemblyReference.cache
 D:\Git Projects\nopantsprogramming\NppService\NppService\obj\Debug\netcoreapp3.1\NppService.AssemblyInfoInputs.cache
 D:\Git Projects\nopantsprogramming\NppService\NppService\obj\Debug\netcoreapp3.1\NppService.AssemblyInfo.cs
 D:\Git Projects\nopantsprogramming\NppService\NppService\obj\Debug\netcoreapp3.1\NppService.RazorTargetAssemblyInfo.cache

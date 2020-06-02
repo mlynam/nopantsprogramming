@@ -11,12 +11,15 @@ namespace NppService.Data.Entities
     {
         public int Id { get; set; }
 
+        [Required]
         [StringLength(48)]
         public string Nickname { get; set; }
 
+        [Required]
         [StringLength(48)]
         public string Username { get; set; }
 
+        [Required]
         [ProtectedPersonalData]
         public string Password { get; set; }
 
@@ -26,7 +29,5 @@ namespace NppService.Data.Entities
         public virtual ICollection<Post> Posts { get; set; }
 
         public virtual ICollection<Article> Articles { get; set; }
-
-        public virtual ICollection<Comment> Comments { get; set; }
     }
 }
