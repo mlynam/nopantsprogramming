@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NppService.API.Queries;
+using NppService.API;
+using NppService.API.Types;
 using NppService.Data.Contexts;
 
 namespace NppService
@@ -28,8 +29,8 @@ namespace NppService
 
             services.AddGraphQL(
                 SchemaBuilder.New()
-                .AddQueryType<ArticleQuery>()
-                .AddQueryType<UserQuery>()
+                .AddType<ArticleType>()
+                .AddQueryType<Query>()
                 .Create());
         }
 
@@ -45,14 +46,13 @@ namespace NppService
 
             app.UseRouting();
 
-            app.UseAuthorization();
-
-            app.UseGraphQL("/api").UsePlayground("/api");
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+            app.UseGraphQL("/api");
+            app.UsePlayground("/api", "/playground");
         }
     }
 }
