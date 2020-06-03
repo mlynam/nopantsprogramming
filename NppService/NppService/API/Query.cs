@@ -1,9 +1,8 @@
-﻿using NppService.API.Types;
+﻿using HotChocolate.Types;
+using Microsoft.EntityFrameworkCore;
 using NppService.Data.Contexts;
 using NppService.Data.Entities;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace NppService.API
 {
@@ -16,6 +15,19 @@ namespace NppService.API
             _context = context;
         }
 
-        public IQueryable<Article> Articles() => _context.Articles;
+        [UseSelection]
+        public IQueryable<Article> Articles() => _context.Articles.AsNoTracking();
+
+        [UseSelection]
+        public IQueryable<User> Users() => _context.Users.AsNoTracking();
+
+        [UseSelection]
+        public IQueryable<Post> Posts() => _context.Posts.AsNoTracking();
+
+        [UseSelection]
+        public IQueryable<Category> Categories() => _context.Categories.AsNoTracking();
+
+        [UseSelection]
+        public IQueryable<Tag> Tags() => _context.Tags.AsNoTracking();
     }
 }

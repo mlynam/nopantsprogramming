@@ -3,11 +3,11 @@ using NppService.Data.Entities;
 
 namespace NppService.API.Types
 {
-    public class ArticleType : ObjectType<Article>
+    public class PostType : ObjectType<Post>
     {
-        protected override void Configure(IObjectTypeDescriptor<Article> descriptor)
+        protected override void Configure(IObjectTypeDescriptor<Post> descriptor)
         {
-            descriptor.Name("Article");
+            descriptor.Name("Post");
             descriptor.BindFields(BindingBehavior.Explicit);
 
             descriptor.Field(x => x.Id);
@@ -19,6 +19,7 @@ namespace NppService.API.Types
             descriptor.Field(x => x.Content);
             descriptor.Field(x => x.CreatedOn);
             descriptor.Field(x => x.UpdatedOn);
+            descriptor.Field(x => x.Tags);
         }
     }
 }

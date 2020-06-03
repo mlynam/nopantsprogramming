@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace NppService.Data.Entities
 {
@@ -22,12 +20,12 @@ namespace NppService.Data.Entities
 
         public int UserId { get; set; }
 
-        public virtual User User { get; set; }
+        public User User { get; set; }
 
         public int? CategoryId { get; set; }
 
-        public virtual Category Category { get; set; }
+        public Category Category { get; set; }
 
-        public virtual ICollection<PostTag> Tags { get; set; }
+        public IList<PostTag> Tags { get; set; }
     }
 }

@@ -162,5 +162,8 @@ D:\Git Projects\nopantsprogramming\NppService\NppService\bin\Debug\netcoreapp3.1
 D:\Git Projects\nopantsprogramming\NppService\NppService\bin\Debug\netcoreapp3.1\HotChocolate.AspNetCore.Subscriptions.dll
 D:\Git Projects\nopantsprogramming\NppService\NppService\bin\Debug\netcoreapp3.1\HotChocolate.Server.dll
 D:\Git Projects\nopantsprogramming\NppService\NppService\bin\Debug\netcoreapp3.1\HotChocolate.AspNetCore.Playground.dll
+D:\Git Projects\nopantsprogramming\NppService\NppService\bin\Debug\netcoreapp3.1\HotChocolate.Types.Filters.dll
+D:\Git Projects\nopantsprogramming\NppService\NppService\bin\Debug\netcoreapp3.1\HotChocolate.Types.Selections.dll
+D:\Git Projects\nopantsprogramming\NppService\NppService\bin\Debug\netcoreapp3.1\HotChocolate.Types.Sorting.dll
 D:\Git Projects\nopantsprogramming\NppService\NppService\obj\Debug\netcoreapp3.1\NppService.csproj.CoreCompileInputs.cache
 D:\Git Projects\nopantsprogramming\NppService\NppService\obj\Debug\netcoreapp3.1\NppService.MvcApplicationPartsAssemblyInfo.cache

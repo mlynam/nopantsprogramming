@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace NppService.Data.Entities
 {
@@ -17,8 +15,8 @@ namespace NppService.Data.Entities
 
         public DateTime UpdatedOn { get; set; }
 
-        public virtual ICollection<ArticleTag> Articles { get; set; }
+        public IList<ArticleTag> Articles { get; set; }
 
-        public virtual ICollection<PostTag> Posts { get; set; }
+        public IList<PostTag> Posts { get; set; }
     }
 }

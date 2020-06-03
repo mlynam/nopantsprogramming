@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uCR1e76xHh7CecDdyyFhZYMAai/57FdxntivobkOwg3IA5BifGJlOkj+8KkftA0bor1gmql9QUETkePHcBh5ww==",
+  "dgSpecHash": "/Jd51NuRNXHMzMC1tPzTxvW8EbHOGrsWhTd1d+Ffspv19WXAe2PK/Fj4l4V9AnWwO0lhgRp0iB840OsM00pSIQ==",
   "success": true,
   "projectFilePath": "D:\\Git Projects\\nopantsprogramming\\NppService\\NppService\\NppService.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,9 @@
     "C:\\Users\\jonku\\.nuget\\packages\\hotchocolate.server\\10.4.3\\hotchocolate.server.10.4.3.nupkg.sha512",
     "C:\\Users\\jonku\\.nuget\\packages\\hotchocolate.subscriptions\\10.4.3\\hotchocolate.subscriptions.10.4.3.nupkg.sha512",
     "C:\\Users\\jonku\\.nuget\\packages\\hotchocolate.types\\10.4.3\\hotchocolate.types.10.4.3.nupkg.sha512",
+    "C:\\Users\\jonku\\.nuget\\packages\\hotchocolate.types.filters\\10.4.3\\hotchocolate.types.filters.10.4.3.nupkg.sha512",
+    "C:\\Users\\jonku\\.nuget\\packages\\hotchocolate.types.selections\\10.4.3\\hotchocolate.types.selections.10.4.3.nupkg.sha512",
+    "C:\\Users\\jonku\\.nuget\\packages\\hotchocolate.types.sorting\\10.4.3\\hotchocolate.types.sorting.10.4.3.nupkg.sha512",
     "C:\\Users\\jonku\\.nuget\\packages\\hotchocolate.utilities\\10.4.3\\hotchocolate.utilities.10.4.3.nupkg.sha512",
     "C:\\Users\\jonku\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\jonku\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

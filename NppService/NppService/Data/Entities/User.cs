@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace NppService.Data.Entities
 {
@@ -28,8 +26,8 @@ namespace NppService.Data.Entities
 
         public DateTime RegisteredOn { get; set; }
 
-        public virtual ICollection<Post> Posts { get; set; }
+        public IList<Post> Posts { get; set; }
 
-        public virtual ICollection<Article> Articles { get; set; }
+        public IList<Article> Articles { get; set; }
     }
 }

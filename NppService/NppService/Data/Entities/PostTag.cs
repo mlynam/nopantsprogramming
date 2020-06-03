@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace NppService.Data.Entities
+﻿namespace NppService.Data.Entities
 {
     public class PostTag
     {
@@ -11,10 +6,10 @@ namespace NppService.Data.Entities
 
         public int PostId { get; set; }
 
-        public virtual Post Post { get; set; }
+        public Post Post { get; set; }
 
         public int TagId { get; set; }
 
-        public virtual Tag Tag { get; set; }
+        public Tag Tag { get; set; }
     }
 }

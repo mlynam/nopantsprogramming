@@ -30,6 +30,10 @@ namespace NppService
             services.AddGraphQL(
                 SchemaBuilder.New()
                 .AddType<ArticleType>()
+                .AddType<UserType>()
+                .AddType<PostType>()
+                .AddType<CategoryType>()
+                .AddType<TagType>()
                 .AddQueryType<Query>()
                 .Create());
         }
