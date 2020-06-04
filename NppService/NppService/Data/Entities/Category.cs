@@ -17,8 +17,8 @@ namespace NppService.Data.Entities
 
         public DateTime UpdatedOn { get; set; }
 
-        public IList<Post> Posts { get; set; }
+        public virtual IList<Post> Posts { get; set; }
 
-        public IList<Article> Articles { get; set; }
+        public virtual IList<Article> Articles { get; set; }
     }
 }

@@ -1,17 +1,17 @@
-﻿using System;
+﻿using AutoMapper;
+using NppService.Data.Entities;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
-namespace NppService.Data.Entities
+namespace NppService.API.Model
 {
-  public class Post
+  public class PostDTO
   {
     public int Id { get; set; }
 
-    [Required]
     public string Title { get; set; }
 
-    [Required]
     public string Content { get; set; }
 
     public DateTime CreatedOn { get; set; }
@@ -20,12 +20,12 @@ namespace NppService.Data.Entities
 
     public int UserId { get; set; }
 
-    public virtual User User { get; set; }
+    public User User { get; set; }
 
     public int? CategoryId { get; set; }
 
-    public virtual Category Category { get; set; }
+    public Category Category { get; set; }
 
-    public virtual IList<PostTag> Tags { get; set; }
+    public IList<TagDTO> Tags { get; set; }
   }
 }
