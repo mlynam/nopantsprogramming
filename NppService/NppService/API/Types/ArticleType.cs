@@ -19,6 +19,7 @@ namespace NppService.API.Types
             descriptor.Field(x => x.Content);
             descriptor.Field(x => x.CreatedOn);
             descriptor.Field(x => x.UpdatedOn);
+            descriptor.Field(x => x.Tags);
         }
     }
 }
